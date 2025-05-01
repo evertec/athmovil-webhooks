@@ -104,82 +104,80 @@ The following is a list of the events that your webhook listener can receive alo
 ### eCommerce Payment Completed
 ```javascript
 {
-    "transactionType" : "ecommerce",
-    "status" : "completed",
-    "date" : "2020-01-01 12:00:00.0",
-    "referenceNumber" : "000000-00000000abcd",
-    "dailyTransactionID" : "0001",
-    "name" : "Valeria Herrero",
-    "phoneNumber" : "7871234567",
-    "email" : "email@example.com",
-    "message" : "",
-    "total" : "3.00",
-    "tax" : "1.00",
-    "subtotal" : "2.00",
-    "fee" : "0.06",
-    "netAmount" : "0.94",
-    "totalRefundedAmount" : "0.00",
-    "metadata1" : "This is metadata1",
-    "metadata2" : "This is metadata2",
-    "items" : [
-      {
-        "quantity" : "1",
-        "tax" : "1.00",
-        "metadata" : "metadata test",
-        "name" : "First Item",
-        "description" : "This is a description.",
-        "price" : "0.00"
-      },
-      {
-        "quantity" : "1",
-        "tax" : "1.00",
-        "metadata" : "metadata test",
-        "name" : "Second Item",
-        "description" : "This is another description.",
-        "price" : "1.00"
-      }
-    ]
+    "businessName": "ATH Business Test",
+    "dailyTransactionId": "0001",
+    "date": "2025-05-01 11:02:21",
+    "ecommerceId": "34231295-269d-11f0-a323-6f23e0bf3a42",
+    "email": "",
+    "fee": 0.0,
+    "isNonProfit": false,
+    "items": [
+        {
+            "description": "Prueba de items",
+            "formattedPrice": "",
+            "metadata": "prueba metadata",
+            "name": "Nombre de arreglo",
+            "price": 2,
+            "quantity": 3,
+            "sku": "",
+            "tax": 1
+        }
+    ],
+    "message": "",
+    "metadata1": "Prueba1.1",
+    "metadata2": "Prueba2.2",
+    "name": "",
+    "netAmount": 1.0,
+    "phoneNumber": 0,
+    "referenceNumber": "1024264030-8a36d6ba967ef82501968c5eb7376349",
+    "referenceTransactionId": "8a36d69a8c36c011018ce97681e203d0",
+    "status": "COMPLETED",
+    "subTotal": 1,
+    "tax": 1.0,
+    "total": 1,
+    "totalRefundedAmount": 0,
+    "transactionDate": "2025-05-01 11:02:19",
+    "transactionType": "ECOMMERCE"
 }
 ```
 
 ### eCommerce Payment Cancelled
 ```javascript
 {
-    "transactionType" : "ecommerce",
-    "status" : "cancelled",
-    "date" : "2020-01-01 12:00:00.0",
-    "referenceNumber" : "",
-    "dailyTransactionID" : "",
-    "name" : "",
-    "phoneNumber" : "",
-    "email" : "",
-    "message" : "",
-    "total" : "3.00",
-    "tax" : "1.00",
-    "subtotal" : "2.00",
-    "fee" : "0.00",
-    "netAmount" : "0.00",
-    "totalRefundedAmount" : "0.00",
-    "metadata1" : "This is metadata1",
-    "metadata2" : "This is metadata2",
-    "items" : [
-      {
-        "quantity" : "1",
-        "tax" : "1.00",
-        "metadata" : "metadata test",
-        "name" : "First Item",
-        "description" : "This is a description.",
-        "price" : "0.00"
-      },
-      {
-        "quantity" : "1",
-        "tax" : "1.00",
-        "metadata" : "metadata test",
-        "name" : "Second Item",
-        "description" : "This is another description.",
-        "price" : "1.00"
-      }
-    ]
+    "businessName": "ATH Business Test",
+    "dailyTransactionId": "",
+    "date": "2025-05-01 11:03:31",
+    "ecommerceId": "66b341b7-269d-11f0-a8c9-b15654eb8c8b",
+    "email": "",
+    "fee": 0.0,
+    "isNonProfit": false,
+    "items": [
+        {
+            "description": "Prueba de items",
+            "formattedPrice": "",
+            "metadata": "prueba metadata",
+            "name": "Nombre de arreglo",
+            "price": 2,
+            "quantity": 3,
+            "sku": "",
+            "tax": 1
+        }
+    ],
+    "message": "",
+    "metadata1": "Prueba1.1",
+    "metadata2": "Prueba2.2",
+    "name": "",
+    "netAmount": 0,
+    "phoneNumber": 0,
+    "referenceNumber": "",
+    "referenceTransactionId": "8a36d69a8c36c011018ce97681e203d0",
+    "status": "CANCEL",
+    "subTotal": 1,
+    "tax": 1.0,
+    "total": 1,
+    "totalRefundedAmount": 0,
+    "transactionDate": "",
+    "transactionType": "ECOMMERCE"
 }
 ```
 *This event is only sent when end users cancel the web payment process. Payments cancelled on the iOS or Android integration do not trigger this event.*
